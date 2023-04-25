@@ -29,7 +29,8 @@ begin
         _qry.Next;
       end;
     except
-      raise Exception.Create('Erro ao carregar os clientes.');
+      on E: Exception do
+        raise Exception.Create('Erro ao carregar os clientes. Erro: ' + E.Message);
     end;
   finally
     _qry.DisposeOf;
