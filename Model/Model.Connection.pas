@@ -63,6 +63,7 @@ begin
   TFDPhysMySQLConnectionDefParams(FConnList.Items[Result].Params).Port     := Porta;
   TFDPhysMySQLConnectionDefParams(FConnList.Items[Result].Params).UserName := Usuario;
   TFDPhysMySQLConnectionDefParams(FConnList.Items[Result].Params).Password := Senha;
+  TFDPhysMySQLConnectionDefParams(FConnList.Items[Result].Params).Database := 'TESTEDELPHI';
 
   FConnList.Items[Result].Connected;
 end;
